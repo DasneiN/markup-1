@@ -1,0 +1,599 @@
+@import "modules/reset";
+
+@import "modules/fonts";
+
+@import "modules/common";
+
+
+/*
+*  STYLES
+*/
+
+body {
+	position: relative;
+	height: auto;
+	min-height: 100vh;
+	padding-bottom: 320px;
+}
+
+header {
+	background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0, 0, 0, 0) 100%);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 9;
+
+	.container {
+		padding: 0px;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+	.logo {
+		margin-top: 48px;
+	}
+
+	.main-menu {
+		padding-right: 40px;
+
+		span {
+			position: relative;
+			display: inline-block;
+			padding: 52px 12px 0px;
+
+			&:nth-of-type(n+2) {
+				margin-left: 24px;
+			}
+
+			a {
+				color: #fff;
+				font-family: 'Gentium Basic', serif;
+				font-size: 21px;
+				font-weight: 700;
+
+				&.active {
+					&:before {
+						display: inline-block;
+						content: "";
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						right: 0px;
+						height: 3px;
+						opacity: 0.71;
+						background: #fff;
+					}
+				}
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&.socials {
+				margin-left: 6px;
+				padding: 0px;
+
+				a {
+					color: #dab33e;
+					font-size: 21px;
+					
+					&:nth-of-type(n+2) {
+						margin-left: 12px;
+					}
+
+					&:hover {
+						color: #fff;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.section-promo {
+	background: url(../img/section-promo__bg.jpg) no-repeat center center / cover;
+
+	.container {
+		padding: 215px 140px 142px;
+	}
+
+	h1 {
+		text-align: center;
+		opacity: 0.92;
+		text-shadow: 0.5px 0.9px 2px rgba(1, 1, 1, 0.64);
+		color: #fff;
+		font-family: 'Yeseva One', cursive;
+		font-size: 90px;
+		font-weight: 400;
+		line-height: 1.3em;
+		padding-bottom: 68px;
+		background: url(../img/section-promo__h1-bg.png) no-repeat center bottom;
+	}
+
+	.buttons {
+		text-align: center;
+		width: 100%;
+		height: auto;
+		font-size: 0px;
+		margin-top: 34px;
+		
+		a {
+			display: inline-block;
+			width: 228px;
+			line-height: 55px;
+			color: #fff;
+			font-family: 'Lato', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			text-align: center;
+			margin: 0px 15px;
+			text-transform: uppercase;
+
+			&.button_booking,
+			&.button_menu {
+				&:hover {
+					opacity: 1;
+				}
+			}
+
+			&.button_booking {
+				opacity: 0.8;
+				background-color: rgba(0, 0, 0, 0.7);
+				border: 1px solid #000;
+			}
+
+			&.button_menu {
+				opacity: 0.7;
+				background-color: rgba(255, 255, 255, 0.28);
+				border: 1px solid #fff;
+			}
+		}
+	}
+}
+
+.section-about {
+	background: linear-gradient(-13deg, rgba(12, 52, 53, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), url(../img/pattern-1.png);
+	box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05);
+
+	.container {
+		background: url(../img/section-about__dish.png) no-repeat right 65px top 55px;
+		padding: 103px 710px 110px 110px;
+	}
+
+	h2 {
+		text-align: center;
+		color: #c90;
+		font-family: 'Yeseva One', cursive;
+		font-size: 36px;
+		font-weight: 400;
+		padding-bottom: 42px;
+		background: url(../img/section-about__h2.png) no-repeat center bottom;
+	}
+
+	p {
+		text-align: center;
+		color: #4c4c4c;
+		font-family: 'Lato', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5em;
+		margin-top: 25px;
+	}
+
+	.cook {
+		margin-top: 50px;
+		margin-left: 140px;
+	}
+}
+
+.section-ingredients {
+	background: url(../img/section-ingredients__bg.jpg) no-repeat center center / cover;
+
+	.container {
+		padding: 100px 40px 102px 640px;
+	}
+
+	.block {
+		background-color: rgba(0,0,0,0.67);
+		padding: 79px 70px 80px;
+
+		h2 {
+			text-align: center;
+			color: #fff;
+			font-family: 'Yeseva One', cursive;
+			font-size: 36px;
+			font-weight: 400;
+			padding-bottom: 41px;
+			background: url(../img/section-ingredients__h2.png) no-repeat center bottom;
+		}
+
+		.description {
+			text-align: center;
+			color: #fff;
+			font-family: 'Lato', sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.5em;
+			margin-top: 25px;
+		}
+
+		.ingredients {
+			text-align: center;
+			font-size: 0px;
+			margin-top: 65px;
+
+			.icon {
+				display: inline-block;
+				border: 5px solid rgba(255, 255, 255, 0.09);
+				width: 110px;
+				height: 110px;
+				border-radius: 100%;
+				margin: 0px 15px;
+				overflow: hidden;
+
+				span {
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+					background-repeat: no-repeat;
+					background-position: center center;
+				}
+			}
+		}
+	}
+}
+
+.section-menu {
+	background: linear-gradient(134deg, rgba(32, 90, 91, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%), url(../img/pattern-2.png);
+	box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
+
+	.container {
+		padding: 103px 100px 84px 96px;
+	}
+
+	.menus {
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+
+		.col {
+			width: 455px;
+			float: left;
+
+			&:nth-of-type(2n) {
+				float: right;
+			}
+
+			.card {
+				width: 100%;
+				height: auto;
+
+				&:nth-of-type(n+2) {
+					margin-top: 55px;
+				}
+
+				.title {
+					text-align: center;
+					color: #c90;
+					font-family: 'Yeseva One', cursive;
+					font-size: 36px;
+					font-weight: 400;
+					padding-bottom: 40px;
+					background: url(../img/section-menu__card-h3.png) no-repeat center bottom;
+				}
+
+				ul {
+					li {
+						margin-top: 20px;
+						border: 1px solid rgba(0,0,0,0);
+						position: relative;
+						padding: 8px 10px 10px;
+
+						&.special {
+							border-color: #c89f2d;
+
+							&:before {
+								visibility: visible;
+							}
+						}
+
+						&:before {
+							content: "Special";
+							display: inline-block;
+							position: absolute;
+							top: -22px;
+							right: -1px;
+							line-height: 22px;
+							color: #f8fafa;
+							font-family: 'Lato', sans-serif;
+							font-size: 14px;
+							font-weight: 400;
+							background: url(../img/section-menu__card__special-bg.png) no-repeat center center / cover;
+							padding: 0px 0.9em;
+
+							visibility: hidden;
+						}
+
+						.position {
+							font-weight: 400;
+							color: #c89f2d;
+							font-family: 'Yeseva One', cursive;
+							font-size: 21px;
+							float: left;
+						}
+
+						.price {
+							font-weight: 400;
+							color: #c89f2d;
+							font-family: 'Yeseva One', cursive;
+							font-size: 21px;
+							float: right;
+						}
+
+						.description {
+							border-top: 1px solid #c89f2d;
+							margin-top: 9px;
+							width: 100%;
+							display: inline-block;
+							padding-top: 12px;
+							font-weight: 400;
+							color: #4c4c4c;
+							font-family: 'Lato', sans-serif;
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.section-reviews {
+	background: url(../img/section-reviews__bg.jpg) no-repeat center center / cover;
+
+	.container {
+		padding: 100px 240px 101px;
+	}
+
+	.block {
+		background: rgba(0,0,0,0.8);
+		padding: 79px 75px 104px;
+
+		.title {
+			text-align: center;
+			color: #fff;
+			font-family: 'Yeseva One', cursive;
+			font-size: 36px;
+			font-weight: 400;
+			padding-bottom: 42px;
+			background: url(../img/section-reviews__h2.png) no-repeat center bottom;
+		}
+
+		.feedback {
+			text-align: center;
+			margin-top: 19px;
+			color: #dde0df;
+			font-family: 'Gentium Basic', serif;
+			font-size: 25px;
+			font-weight: 700;
+			line-height: 1.8em;
+		}
+
+		.author {
+			text-align: center;
+			color: #fff;
+			font-family: 'Lato', sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			margin-top: 34px;
+		}
+	}
+}
+
+.section-reservations {
+	background: linear-gradient(-13deg, rgba(12, 52, 53, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), url(../img/pattern-1.png);
+	box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05);
+
+	.container {
+		padding: 100px 110px 103px 40px;
+	}
+
+	.photo {
+		float: left;
+		margin-right: 30px;
+	}
+
+	.block {
+		width: 430px;
+		float: right;
+
+		.title {
+			text-align: center;
+			color: #c90;
+			font-family: 'Yeseva One', cursive;
+			font-size: 36px;
+			font-weight: 400;
+			padding-bottom: 40px;
+			background: url(../img/section-reservations__h2.png) no-repeat center bottom;
+		}
+
+		p {
+			text-align: center;
+			color: #4c4c4c;
+			font-family: 'Lato', sans-serif;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 1.5em;
+			margin-top: 10px;
+
+			&:nth-of-type(1) {
+				margin-top: 26px;
+			}
+		}
+
+		form {
+			width: 100%;
+			margin-top: 40px;
+
+			.input-container {
+				width: 200px;
+				height: auto;
+				overflow: hidden;
+				float: left;
+				margin-bottom: 25px;
+
+				&:nth-of-type(2n) {
+					float: right;
+				}
+
+				span {
+					color: #c9a131;
+					font-family: 'Open Sans', sans-serif;
+					font-size: 14px;
+					font-weight: 700;
+				}
+
+				input {
+					width: 100%;
+					height: 36px;
+					background-color: rgba(255, 255, 255, 0.4);
+					border: 1px solid #c8c6c6;
+					margin-top: 7px;
+					color: #7c7c7c;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 400;
+					font-size: 16px;
+					font-style: italic;
+					padding-left: 1em;
+
+					&[name=name] {
+						border: 1px solid #c89f2d;
+					}
+
+					&[type=date] {
+						background-image: url(../img/section-reservations__date.png);
+						background-repeat: no-repeat;
+						background-position: right 11px center;
+						appearance: none;
+					}
+				}
+
+				select {
+					appearance: none;
+					width: 100%;
+					height: 36px;
+					background-color: rgba(255, 255, 255, 0.4);
+					border: 1px solid #c8c6c6;
+					margin-top: 7px;
+					color: #7c7c7c;
+					font-family: 'Open Sans', sans-serif;
+					font-weight: 400;
+					font-size: 16px;
+					font-style: italic;
+					padding-left: 1em;
+					border-radius: 0px;
+					background-repeat: no-repeat;
+
+					&[name=date] {
+						background-image: url(../img/section-reservations__date.png);
+						background-position: right 11px center;
+					}
+
+					&[name=number] {
+						background-image: url(../img/section-reservations__number.png);
+						background-position: right 11px center;
+					}
+
+					.placeholder {
+						display: none;
+					}
+				}
+			}
+
+			button {
+				color: #fff;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16px;
+				font-weight: 400;
+				width: 200px;
+				height: 36px;
+				background-color: rgba(200, 159, 45, 0.98);
+				border: 1px solid #c89f2d;
+				float: left;
+				margin-left: 116px;
+				margin-top: 7px;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: #191919;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+
+	.container {
+		padding: 59px 40px 66px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.col {
+		width: 370px;
+		height: auto;
+		position: relative;
+
+		&:nth-of-type(n+2) {
+			padding: 0px 70px;
+		}
+
+		.title {
+			color: #fefefe;
+			font-family: 'Yeseva One', cursive;
+			font-size: 21px;
+			font-weight: 400;
+			text-align: center;
+			padding-bottom: 36px;
+			background: url(../img/footer__title-bg.png) no-repeat center bottom;
+		}
+
+		p {
+			margin-top: 18px;
+			color: #fff;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 300;
+			font-size: 16px;
+			line-height: 1.5em;
+			text-align: center;
+		}
+
+		.bottom {
+			display: inline-block;
+			text-align: center;
+			position: absolute;
+			bottom: 5px;
+			left: 0px;
+			right: 0px;
+
+			a {
+				color: #fff;
+				font-size: 16px;
+				margin: 0px 2px;
+
+				&:hover {
+					color: #c90;
+				}
+			}
+		}
+	}
+}

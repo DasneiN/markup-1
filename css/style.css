@@ -1,0 +1,552 @@
+/*	ERIC MEYER'S STYLE RESET*/
+@import url("https://fonts.googleapis.com/css?family=Gentium+Basic:700|Lato|Open+Sans:300,400,700|Yeseva+One");
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td,
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+  vertical-align: baseline;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+body {
+  background: white;
+  line-height: 1;
+  color: black; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left; }
+
+/* remove possible quote marks (") from <q> & <blockquote> */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+/*	ERIC MEYER'S STYLE RESET END*/
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+a {
+  outline: none;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+.a_left {
+  float: left;
+  margin: 0 10px 10px 0; }
+
+.a_right {
+  float: right;
+  margin: 0 0 10px 10px; }
+
+.a_center {
+  text-align: center; }
+
+button {
+  border: none;
+  cursor: pointer; }
+
+input {
+  border: none; }
+
+/*
+html {
+	overflow-y: scroll !important;
+	overflow-x: auto !important;
+}
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body > section {
+  width: 100%;
+  min-width: 1250px; }
+
+.container {
+  width: 1250px;
+  height: auto;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px auto;
+  position: relative;
+  padding: 0px 40px; }
+
+.hidden {
+  display: none; }
+
+.input_error {
+  border: 2px solid red !important; }
+
+/*
+*  STYLES
+*/
+body {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 320px; }
+
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9; }
+  header .container {
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  header .logo {
+    margin-top: 48px; }
+  header .main-menu {
+    padding-right: 40px; }
+    header .main-menu span {
+      position: relative;
+      display: inline-block;
+      padding: 52px 12px 0px; }
+      header .main-menu span:nth-of-type(n+2) {
+        margin-left: 24px; }
+      header .main-menu span a {
+        color: #fff;
+        font-family: 'Gentium Basic', serif;
+        font-size: 21px;
+        font-weight: 700; }
+        header .main-menu span a.active:before {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          height: 3px;
+          opacity: 0.71;
+          background: #fff; }
+        header .main-menu span a:hover {
+          text-decoration: underline; }
+      header .main-menu span.socials {
+        margin-left: 6px;
+        padding: 0px; }
+        header .main-menu span.socials a {
+          color: #dab33e;
+          font-size: 21px; }
+          header .main-menu span.socials a:nth-of-type(n+2) {
+            margin-left: 12px; }
+          header .main-menu span.socials a:hover {
+            color: #fff;
+            text-decoration: none; }
+
+.section-promo {
+  background: url(../img/section-promo__bg.jpg) no-repeat center center/cover; }
+  .section-promo .container {
+    padding: 215px 140px 142px; }
+  .section-promo h1 {
+    text-align: center;
+    opacity: 0.92;
+    text-shadow: 0.5px 0.9px 2px rgba(1, 1, 1, 0.64);
+    color: #fff;
+    font-family: 'Yeseva One', cursive;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 1.3em;
+    padding-bottom: 68px;
+    background: url(../img/section-promo__h1-bg.png) no-repeat center bottom; }
+  .section-promo .buttons {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    font-size: 0px;
+    margin-top: 34px; }
+    .section-promo .buttons a {
+      display: inline-block;
+      width: 228px;
+      line-height: 55px;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+      margin: 0px 15px;
+      text-transform: uppercase; }
+      .section-promo .buttons a.button_booking:hover, .section-promo .buttons a.button_menu:hover {
+        opacity: 1; }
+      .section-promo .buttons a.button_booking {
+        opacity: 0.8;
+        background-color: rgba(0, 0, 0, 0.7);
+        border: 1px solid #000; }
+      .section-promo .buttons a.button_menu {
+        opacity: 0.7;
+        background-color: rgba(255, 255, 255, 0.28);
+        border: 1px solid #fff; }
+
+.section-about {
+  background: linear-gradient(-13deg, rgba(12, 52, 53, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), url(../img/pattern-1.png);
+  -webkit-box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05);
+          box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05); }
+  .section-about .container {
+    background: url(../img/section-about__dish.png) no-repeat right 65px top 55px;
+    padding: 103px 710px 110px 110px; }
+  .section-about h2 {
+    text-align: center;
+    color: #c90;
+    font-family: 'Yeseva One', cursive;
+    font-size: 36px;
+    font-weight: 400;
+    padding-bottom: 42px;
+    background: url(../img/section-about__h2.png) no-repeat center bottom; }
+  .section-about p {
+    text-align: center;
+    color: #4c4c4c;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+    margin-top: 25px; }
+  .section-about .cook {
+    margin-top: 50px;
+    margin-left: 140px; }
+
+.section-ingredients {
+  background: url(../img/section-ingredients__bg.jpg) no-repeat center center/cover; }
+  .section-ingredients .container {
+    padding: 100px 40px 102px 640px; }
+  .section-ingredients .block {
+    background-color: rgba(0, 0, 0, 0.67);
+    padding: 79px 70px 80px; }
+    .section-ingredients .block h2 {
+      text-align: center;
+      color: #fff;
+      font-family: 'Yeseva One', cursive;
+      font-size: 36px;
+      font-weight: 400;
+      padding-bottom: 41px;
+      background: url(../img/section-ingredients__h2.png) no-repeat center bottom; }
+    .section-ingredients .block .description {
+      text-align: center;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5em;
+      margin-top: 25px; }
+    .section-ingredients .block .ingredients {
+      text-align: center;
+      font-size: 0px;
+      margin-top: 65px; }
+      .section-ingredients .block .ingredients .icon {
+        display: inline-block;
+        border: 5px solid rgba(255, 255, 255, 0.09);
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+        margin: 0px 15px;
+        overflow: hidden; }
+        .section-ingredients .block .ingredients .icon span {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: center center; }
+
+.section-menu {
+  background: linear-gradient(134deg, rgba(32, 90, 91, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%), url(../img/pattern-2.png);
+  -webkit-box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14);
+          box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.14); }
+  .section-menu .container {
+    padding: 103px 100px 84px 96px; }
+  .section-menu .menus {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+    .section-menu .menus .col {
+      width: 455px;
+      float: left; }
+      .section-menu .menus .col:nth-of-type(2n) {
+        float: right; }
+      .section-menu .menus .col .card {
+        width: 100%;
+        height: auto; }
+        .section-menu .menus .col .card:nth-of-type(n+2) {
+          margin-top: 55px; }
+        .section-menu .menus .col .card .title {
+          text-align: center;
+          color: #c90;
+          font-family: 'Yeseva One', cursive;
+          font-size: 36px;
+          font-weight: 400;
+          padding-bottom: 40px;
+          background: url(../img/section-menu__card-h3.png) no-repeat center bottom; }
+        .section-menu .menus .col .card ul li {
+          margin-top: 20px;
+          border: 1px solid transparent;
+          position: relative;
+          padding: 8px 10px 10px; }
+          .section-menu .menus .col .card ul li.special {
+            border-color: #c89f2d; }
+            .section-menu .menus .col .card ul li.special:before {
+              visibility: visible; }
+          .section-menu .menus .col .card ul li:before {
+            content: "Special";
+            display: inline-block;
+            position: absolute;
+            top: -22px;
+            right: -1px;
+            line-height: 22px;
+            color: #f8fafa;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            background: url(../img/section-menu__card__special-bg.png) no-repeat center center/cover;
+            padding: 0px 0.9em;
+            visibility: hidden; }
+          .section-menu .menus .col .card ul li .position {
+            font-weight: 400;
+            color: #c89f2d;
+            font-family: 'Yeseva One', cursive;
+            font-size: 21px;
+            float: left; }
+          .section-menu .menus .col .card ul li .price {
+            font-weight: 400;
+            color: #c89f2d;
+            font-family: 'Yeseva One', cursive;
+            font-size: 21px;
+            float: right; }
+          .section-menu .menus .col .card ul li .description {
+            border-top: 1px solid #c89f2d;
+            margin-top: 9px;
+            width: 100%;
+            display: inline-block;
+            padding-top: 12px;
+            font-weight: 400;
+            color: #4c4c4c;
+            font-family: 'Lato', sans-serif;
+            font-size: 16px; }
+
+.section-reviews {
+  background: url(../img/section-reviews__bg.jpg) no-repeat center center/cover; }
+  .section-reviews .container {
+    padding: 100px 240px 101px; }
+  .section-reviews .block {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 79px 75px 104px; }
+    .section-reviews .block .title {
+      text-align: center;
+      color: #fff;
+      font-family: 'Yeseva One', cursive;
+      font-size: 36px;
+      font-weight: 400;
+      padding-bottom: 42px;
+      background: url(../img/section-reviews__h2.png) no-repeat center bottom; }
+    .section-reviews .block .feedback {
+      text-align: center;
+      margin-top: 19px;
+      color: #dde0df;
+      font-family: 'Gentium Basic', serif;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.8em; }
+    .section-reviews .block .author {
+      text-align: center;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 34px; }
+
+.section-reservations {
+  background: linear-gradient(-13deg, rgba(12, 52, 53, 0.09) 0%, rgba(255, 255, 255, 0.09) 100%), url(../img/pattern-1.png);
+  -webkit-box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05);
+          box-shadow: inset 0 0 50px rgba(1, 1, 1, 0.05); }
+  .section-reservations .container {
+    padding: 100px 110px 103px 40px; }
+  .section-reservations .photo {
+    float: left;
+    margin-right: 30px; }
+  .section-reservations .block {
+    width: 430px;
+    float: right; }
+    .section-reservations .block .title {
+      text-align: center;
+      color: #c90;
+      font-family: 'Yeseva One', cursive;
+      font-size: 36px;
+      font-weight: 400;
+      padding-bottom: 40px;
+      background: url(../img/section-reservations__h2.png) no-repeat center bottom; }
+    .section-reservations .block p {
+      text-align: center;
+      color: #4c4c4c;
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5em;
+      margin-top: 10px; }
+      .section-reservations .block p:nth-of-type(1) {
+        margin-top: 26px; }
+    .section-reservations .block form {
+      width: 100%;
+      margin-top: 40px; }
+      .section-reservations .block form .input-container {
+        width: 200px;
+        height: auto;
+        overflow: hidden;
+        float: left;
+        margin-bottom: 25px; }
+        .section-reservations .block form .input-container:nth-of-type(2n) {
+          float: right; }
+        .section-reservations .block form .input-container span {
+          color: #c9a131;
+          font-family: 'Open Sans', sans-serif;
+          font-size: 14px;
+          font-weight: 700; }
+        .section-reservations .block form .input-container input {
+          width: 100%;
+          height: 36px;
+          background-color: rgba(255, 255, 255, 0.4);
+          border: 1px solid #c8c6c6;
+          margin-top: 7px;
+          color: #7c7c7c;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          font-style: italic;
+          padding-left: 1em; }
+          .section-reservations .block form .input-container input[name=name] {
+            border: 1px solid #c89f2d; }
+          .section-reservations .block form .input-container input[type=date] {
+            background-image: url(../img/section-reservations__date.png);
+            background-repeat: no-repeat;
+            background-position: right 11px center;
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none; }
+        .section-reservations .block form .input-container select {
+          -webkit-appearance: none;
+             -moz-appearance: none;
+                  appearance: none;
+          width: 100%;
+          height: 36px;
+          background-color: rgba(255, 255, 255, 0.4);
+          border: 1px solid #c8c6c6;
+          margin-top: 7px;
+          color: #7c7c7c;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          font-style: italic;
+          padding-left: 1em;
+          border-radius: 0px;
+          background-repeat: no-repeat; }
+          .section-reservations .block form .input-container select[name=date] {
+            background-image: url(../img/section-reservations__date.png);
+            background-position: right 11px center; }
+          .section-reservations .block form .input-container select[name=number] {
+            background-image: url(../img/section-reservations__number.png);
+            background-position: right 11px center; }
+          .section-reservations .block form .input-container select .placeholder {
+            display: none; }
+      .section-reservations .block form button {
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        width: 200px;
+        height: 36px;
+        background-color: rgba(200, 159, 45, 0.98);
+        border: 1px solid #c89f2d;
+        float: left;
+        margin-left: 116px;
+        margin-top: 7px; }
+        .section-reservations .block form button:hover {
+          opacity: 0.7; }
+
+footer {
+  background-color: #191919;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px; }
+  footer .container {
+    padding: 59px 40px 66px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  footer .col {
+    width: 370px;
+    height: auto;
+    position: relative; }
+    footer .col:nth-of-type(n+2) {
+      padding: 0px 70px; }
+    footer .col .title {
+      color: #fefefe;
+      font-family: 'Yeseva One', cursive;
+      font-size: 21px;
+      font-weight: 400;
+      text-align: center;
+      padding-bottom: 36px;
+      background: url(../img/footer__title-bg.png) no-repeat center bottom; }
+    footer .col p {
+      margin-top: 18px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.5em;
+      text-align: center; }
+    footer .col .bottom {
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      bottom: 5px;
+      left: 0px;
+      right: 0px; }
+      footer .col .bottom a {
+        color: #fff;
+        font-size: 16px;
+        margin: 0px 2px; }
+        footer .col .bottom a:hover {
+          color: #c90; }
+
+/*# sourceMappingURL=style.css.map */
